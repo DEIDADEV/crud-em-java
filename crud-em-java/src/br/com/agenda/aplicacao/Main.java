@@ -17,7 +17,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		// C: CREATE = Cria e salva o contato no banco.
+		// C: CREATE = Cria e salva o contato no banco
 		ContatoDAO contatoDAO = new ContatoDAO();
 		
 		Contato contato = new Contato();
@@ -27,11 +27,11 @@ public class Main {
 		
 		//contatoDAO.save(contato);
 		
-		// R: READ = Visualiza os registros do banco de dados (TODOS OS REGISTROS).
+		// R: READ = Visualiza os registros do banco de dados (TODOS OS REGISTROS)
 		for(Contato c : contatoDAO.getContatos())
 			System.out.println("Contato: " + c.getNome());
 		
-		// U: UPDATE = Atualiza o contato no banco.
+		// U: UPDATE = Atualiza o contato no banco
 		Contato c1 = new Contato();
 		c1.setNome("Pedro dias Orlando");
 		c1.setIdade(37);
@@ -40,7 +40,7 @@ public class Main {
 		
 		//contatoDAO.update(c1);
 		
-		// D: DELETE = Deleta o contato no banco, pelo número de ID.
+		// D: DELETE = Deleta o contato no banco, pelo número de ID
 		contatoDAO.deleteByID(10);//è o número que está no banco de dados da PK
 		
 
